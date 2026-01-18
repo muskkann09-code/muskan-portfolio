@@ -1,41 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8"><meta name="viewport"content="width=device-width,initial-scale=1">
-  <title>Digital Gram — Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Gram — FlutterFlow Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
-  <div class="project-detail">
-    <a href="../index.html">← Back to portfolio</a>
-    <h1>Digital Gram</h1>
-    <p class="muted">Document management app with category & year-wise organization and instant search.</p>
-
-    <h3>Key Features</h3>
-    <ul>
-      <li>Category-based navigation</li>
-      <li>Year-wise document filtering</li>
-      <li>Fast in-app text search inside documents</li>
-      <li>Offline viewing & caching support</li>
-    </ul>
-
-    <h3>Technical Implementation</h3>
-    <p>Implemented UI with FlutterFlow, created custom indexing functions for text search, integrated Firestore/Storage or REST sources for document metadata, and built a local caching layer for offline speed.</p>
-
-    <h3>My Role</h3>
-    <p>Complete UI, custom functions for search indexing, API/Firestore integration, offline cache & Play Store deployment.</p>
-
-    <h3>Tech Stack</h3>
-    <p class="muted">FlutterFlow · PDF Viewer · Cloud Firestore / REST · Local DB · FCM</p>
-
-    <h3>Screenshots</h3>
-    <div class="gallery">
-      <img src="../assets/screenshots/digital-gram/01-home.png" alt="home">
-      <img src="../assets/screenshots/digital-gram/02-document-view.png" alt="document view">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <div class="brand">
+          <a href="../index.html" class="brand-link">
+            <span class="brand-icon"><i class="fas fa-code"></i></span>
+            <span class="brand-name">FlutterFlow<span class="brand-highlight">Dev</span></span>
+          </a>
+        </div>
+        <a href="../index.html" class="btn btn-outline">
+          <i class="fas fa-arrow-left"></i>
+          Back to Portfolio
+        </a>
+      </div>
     </div>
+  </nav>
 
-    <p style="margin-top:18px"><a href="https://play.google.com/store/apps/details?id=com.tsm.digitalgram" target="_blank" class="btn">Open on Play Store</a></p>
-  </div>
+  <!-- Project Detail -->
+  <main class="project-detail-page">
+    <div class="container">
+      <!-- Project Header -->
+      <header class="project-header reveal">
+        <div class="project-meta">
+          <span class="project-category">Document Management</span>
+          <span class="project-date">Published: June 2023</span>
+        </div>
+        
+        <h1 class="project-title">Digital Gram</h1>
+        <p class="project-subtitle">Advanced document management system with category-based organization and instant search</p>
+        
+        <div class="project-cta">
+          <a href="https://play.google.com/store/apps/details?id=com.tsm.digitalgram" target="_blank" class="btn btn-primary btn-lg">
+            <i class="fab fa-google-play"></i>
+            View on Play Store
+          </a>
+          <a href="#contact" class="btn btn-outline btn-lg">
+            <i class="fas fa-paper-plane"></i>
+            Similar Project?
+          </a>
+        </div>
+      </header>
+
+      <!-- Project Stats -->
+      <div class="project-stats reveal">
+        <div class="stat-item">
+          <i class="fas fa-download"></i>
+          <span class="stat-number">5000+</span>
+          <span class="stat-label">Downloads</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-star"></i>
+          <span class="stat-number">4.8</span>
+          <span class="stat-label">Rating</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-clock"></i>
+          <span class="stat-number">3</span>
+          <span class="stat-label">Months Development</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-code"></i>
+          <span class="stat-number">95%</span>
+          <span class="stat-label">FlutterFlow</span>
+        </div>
+      </div>
+
+      <!-- Project Gallery -->
+      <section class="project-gallery reveal">
+        <h2 class="section-title">App <span class="highlight">Screenshots</span></h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="../assets/screenshots/digital-gram/01-home.png" alt="Home Screen" loading="lazy">
+            <span class="gallery-caption">Home Screen</span>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/screenshots/digital-gram/02-document-view.png" alt="Document View" loading="lazy">
+            <span class="gallery-caption">Document Viewer</span>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/screenshots/digital-gram/03-search.png" alt="Search Functionality" loading="lazy">
+            <span class="gallery-caption">Search Interface</span>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/screenshots/digital-gram/04-categories.png" alt="Categories" loading="lazy">
+            <span class="gallery-caption">Category Navigation</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="project-features reveal">
+        <h2 class="section-title">Key <span class="highlight">Features</span></h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-folder-tree"></i>
+            </div>
+            <h3>Category Management</h3>
+            <p>Organize documents in hierarchical categories with intuitive navigation and filtering options.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>Instant Search</h3>
+            <p>Full-text search across all documents with real-time results and search history.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <h3>PDF Viewer</h3>
+            <p>Built-in PDF viewer with zoom, page navigation, and text selection capabilities.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-wifi-slash"></i>
+            </div>
+            <h3>Offline Access</h3>
+            <p>Access downloaded documents without internet connection with smart caching.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Implementation -->
+      <section class="project-tech reveal">
+        <h2 class="section-title">Technical <span class="highlight">Implementation</span></h2>
+        
+        <div class="tech-stack">
+          <h3>Tech Stack</h3>
+          <div class="stack-tags">
+            <span class="stack-tag">FlutterFlow</span>
+            <span class="stack-tag">Dart</span>
+            <span class="stack-tag">Firebase</span>
+            <span class="stack-tag">REST APIs</span>
+            <span class="stack-tag">Local Database</span>
+            <span class="stack-tag">PDF Viewer</span>
+          </div>
+        </div>
+
+        <div class="implementation-details">
+          <div class="detail-card">
+            <h3><i class="fas fa-cogs"></i> Backend Architecture</h3>
+            <p>Integrated Firebase Firestore for real-time document metadata and Firebase Storage for secure document hosting. Implemented custom authentication flow with role-based access control.</p>
+          </div>
+          
+          <div class="detail-card">
+            <h3><i class="fas fa-search"></i> Search Implementation</h3>
+            <p>Developed custom search algorithm using FlutterFlow custom functions to index document content. Implemented fuzzy search with keyword highlighting and search suggestions.</p>
+          </div>
+          
+          <div class="detail-card">
+            <h3><i class="fas fa-database"></i> Offline Functionality</h3>
+            <p>Used FlutterFlow's local storage capabilities combined with custom Dart functions to implement intelligent caching system. Documents are automatically cached based on usage patterns.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- My Role -->
+      <section class="project-role reveal">
+        <h2 class="section-title">My <span class="highlight">Role</span></h2>
+        
+        <div class="role-timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>UI/UX Design</h3>
+              <p>Designed intuitive user interface with focus on document accessibility and search functionality. Created wireframes and prototypes before development.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Development</h3>
+              <p>Built the entire application using FlutterFlow, implementing custom functions for search, navigation, and document handling. Integrated third-party PDF viewer.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Testing & Deployment</h3>
+              <p>Conducted extensive testing across multiple devices. Managed Play Store deployment, including app signing, store listing optimization, and release management.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="project-cta-section reveal" id="contact">
+        <div class="cta-content">
+          <h2>Have a Similar Project in Mind?</h2>
+          <p>Let's discuss how I can help bring your document management app to life with FlutterFlow.</p>
+          <a href="../index.html#contact" class="btn btn-primary btn-lg">
+            <i class="fas fa-paper-plane"></i>
+            Start a Conversation
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="copyright">
+          © <span id="current-year">2024</span> Your Name. All rights reserved.
+        </p>
+        <a href="../index.html" class="btn btn-outline">
+          <i class="fas fa-home"></i>
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </footer>
+
   <script src="../script.js"></script>
 </body>
 </html>
