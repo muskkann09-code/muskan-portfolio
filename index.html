@@ -3,141 +3,633 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FlutterFlow Developer — Portfolio</title>
-  <meta name="description" content="FlutterFlow Developer — UI, custom functions, APIs, Firebase, offline DB, FCM, Play Store deployments" />
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <title>FlutterFlow Developer — Production App Specialist</title>
+  <meta name="description" content="Expert FlutterFlow developer specializing in UI/UX, custom functions, API integrations, Firebase, and Play Store deployments." />
+  
+  <!-- Favicon & Fonts -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
+  
+  <!-- Open Graph -->
   <meta property="og:title" content="FlutterFlow Developer Portfolio" />
   <meta property="og:description" content="Production FlutterFlow apps on Google Play — UI, custom functions, Firebase, API integrations, deployments." />
-  <!-- Replace preview.png with your image path -->
   <meta property="og:image" content="assets/preview.png" />
 </head>
-<body>
-  <div class="site">
-    <!-- top bar -->
-    <nav class="topbar">
-      <div class="brand">
-        <a href="/">Your Name</a>
-      </div>
 
-      <div class="nav-actions">
-        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-        <a class="btn small" href="assets/resume.pdf" download>Download Resume</a>
+<body>
+  <!-- Loading Animation -->
+  <div class="loader">
+    <div class="loader-spinner">
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <!-- Cursor Effect -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <div class="site">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-content">
+          <div class="brand">
+            <a href="/" class="brand-link">
+              <span class="brand-icon"><i class="fas fa-code"></i></span>
+              <span class="brand-name">FlutterFlow<span class="brand-highlight">Dev</span></span>
+            </a>
+          </div>
+
+          <div class="nav-menu">
+            <ul class="nav-links">
+              <li><a href="#home" class="nav-link active">Home</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#projects" class="nav-link">Projects</a></li>
+              <li><a href="#skills" class="nav-link">Skills</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+              <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon theme-icon"></i>
+                <span class="theme-text">Dark</span>
+              </button>
+              <a class="btn btn-primary btn-resume" href="assets/resume.pdf" download>
+                <i class="fas fa-download"></i>
+                <span>Resume</span>
+              </a>
+              <button class="menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
 
-    <!-- HERO -->
-    <header class="hero reveal">
-      <div class="hero-inner">
-        <h1>FlutterFlow Developer</h1>
-        <p class="muted">UI • Custom Functions • Custom Widgets • API Integrations • Firebase • FCM • Deployments</p>
-
-        <div class="cta">
-          <a class="btn" href="#projects">View Projects</a>
-          <a class="btn outline" href="#contact">Contact</a>
-        </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <button class="menu-close"><i class="fas fa-times"></i></button>
       </div>
-    </header>
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about" class="mobile-nav-link"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#projects" class="mobile-nav-link"><i class="fas fa-briefcase"></i> Projects</a></li>
+        <li><a href="#skills" class="mobile-nav-link"><i class="fas fa-cogs"></i> Skills</a></li>
+        <li><a href="#contact" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </div>
 
-    <!-- ABOUT -->
-    <section id="about" class="about reveal">
+    <!-- Hero Section -->
+    <section id="home" class="hero reveal">
+      <div class="hero-background">
+        <div class="gradient-circle circle-1"></div>
+        <div class="gradient-circle circle-2"></div>
+        <div class="gradient-circle circle-3"></div>
+      </div>
+      
       <div class="container">
-        <h2>About Me</h2>
-        <p>I build and ship production FlutterFlow apps — I design UI, write custom functions and widgets, integrate REST APIs, implement Firebase (Auth / Firestore / Storage), handle local DB/offline sync, configure push notifications (FCM), and perform Play Store builds & deployments.</p>
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-bolt"></i>
+            <span>Available for Projects</span>
+          </div>
+          
+          <h1 class="hero-title">
+            <span class="title-line">Crafting</span>
+            <span class="title-line highlight">Production-Ready</span>
+            <span class="title-line">FlutterFlow Apps</span>
+          </h1>
+          
+          <p class="hero-subtitle">
+            I transform ideas into polished mobile applications with expert FlutterFlow development, 
+            custom solutions, and seamless deployments to the Google Play Store.
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Projects Deployed</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Play Store Success</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">24h</span>
+              <span class="stat-label">Support Response</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              <i class="fas fa-rocket"></i>
+              <span>View Projects</span>
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg">
+              <i class="fas fa-paper-plane"></i>
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+          <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- About Section -->
+    <section id="about" class="about reveal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">About Me</span>
+          <h2 class="section-title">Turning Ideas into <span class="highlight">Live Apps</span></h2>
+          <p class="section-subtitle">Full-cycle FlutterFlow development from concept to deployment</p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text">
+            <p class="about-paragraph">
+              As a dedicated FlutterFlow developer, I specialize in building production-ready mobile applications 
+              that not only look great but perform flawlessly. With expertise spanning the entire development 
+              lifecycle, I ensure your app meets both user expectations and business goals.
+            </p>
+            
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="service-icon">
+                  <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3 class="service-title">UI/UX Design</h3>
+                <p class="service-desc">Creating intuitive, beautiful interfaces that users love</p>
+              </div>
+              
+              <div class="service-card">
+                <div class="service-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <h3 class="service-title">Custom Development</h3>
+                <p class="service-desc">Custom functions, widgets, and API integrations</p>
+              </div>
+              
+              <div class="service-card">
+                <div class="service-icon">
+                  <i class="fas fa-cloud"></i>
+                </div>
+                <h3 class="service-title">Backend Integration</h3>
+                <p class="service-desc">Firebase, REST APIs, authentication, and databases</p>
+              </div>
+              
+              <div class="service-card">
+                <div class="service-icon">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="service-title">Deployment</h3>
+                <p class="service-desc">Play Store deployments, updates, and maintenance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects" class="projects reveal">
       <div class="container">
-        <h2>Projects</h2>
+        <div class="section-header">
+          <span class="section-label">Portfolio</span>
+          <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+          <p class="section-subtitle">Production apps deployed on Google Play Store</p>
+        </div>
 
-        <div class="project-grid">
+        <div class="projects-grid">
           <!-- E-School Documents -->
           <article class="project-card">
-            <img src="assets/screenshots/eschool-documents/01-home.png" alt="E-School Documents screenshot" class="project-thumb" />
+            <div class="project-image">
+              <img src="assets/screenshots/eschool-documents/01-home.png" alt="E-School Documents" loading="lazy">
+              <div class="project-overlay">
+                <a href="projects/eschool-documents.html" class="project-link">
+                  <i class="fas fa-eye"></i>
+                  View Details
+                </a>
+              </div>
+            </div>
+            
             <div class="project-content">
-              <h3>E-School Documents</h3>
-              <p class="muted">PDF viewer + full-text search, offline caching, Firebase</p>
-              <div class="project-links">
-                <a href="projects/eschool-documents.html" class="link">Details →</a>
-                <a href="https://play.google.com/store/apps/details?id=com.app.generalregister" target="_blank" class="link">Play Store</a>
+              <div class="project-badges">
+                <span class="project-badge badge-featured">Featured</span>
+                <span class="project-badge badge-firebase">Firebase</span>
+                <span class="project-badge badge-offline">Offline</span>
+              </div>
+              
+              <h3 class="project-title">E-School Documents</h3>
+              <p class="project-desc">Advanced PDF viewer with full-text search, offline caching, and Firebase integration for educational institutions.</p>
+              
+              <div class="project-features">
+                <span class="feature">
+                  <i class="fas fa-search"></i>
+                  Full-text Search
+                </span>
+                <span class="feature">
+                  <i class="fas fa-database"></i>
+                  Offline Cache
+                </span>
+                <span class="feature">
+                  <i class="fas fa-cloud"></i>
+                  Firebase
+                </span>
+              </div>
+              
+              <div class="project-actions">
+                <a href="projects/eschool-documents.html" class="btn btn-secondary btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                  Details
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.app.generalregister" target="_blank" class="btn btn-primary btn-sm">
+                  <i class="fab fa-google-play"></i>
+                  Play Store
+                </a>
               </div>
             </div>
           </article>
 
           <!-- Seva Book -->
           <article class="project-card">
-            <img src="assets/screenshots/seva-book/01-home.png" alt="Seva Book screenshot" class="project-thumb" />
+            <div class="project-image">
+              <img src="assets/screenshots/seva-book/01-home.png" alt="Seva Book" loading="lazy">
+              <div class="project-overlay">
+                <a href="projects/seva-book.html" class="project-link">
+                  <i class="fas fa-eye"></i>
+                  View Details
+                </a>
+              </div>
+            </div>
+            
             <div class="project-content">
-              <h3>Seva Book</h3>
-              <p class="muted">Teacher records app — local DB & Firebase integration</p>
-              <div class="project-links">
-                <a href="projects/seva-book.html" class="link">Details →</a>
-                <a href="https://play.google.com/store/apps/details?id=com.tsm.bookseva" target="_blank" class="link">Play Store</a>
+              <div class="project-badges">
+                <span class="project-badge badge-sync">Sync</span>
+                <span class="project-badge badge-localdb">Local DB</span>
+              </div>
+              
+              <h3 class="project-title">Seva Book</h3>
+              <p class="project-desc">Teacher records management app with seamless local database and Firebase synchronization for offline functionality.</p>
+              
+              <div class="project-features">
+                <span class="feature">
+                  <i class="fas fa-sync-alt"></i>
+                  Auto Sync
+                </span>
+                <span class="feature">
+                  <i class="fas fa-mobile-alt"></i>
+                  Offline First
+                </span>
+                <span class="feature">
+                  <i class="fas fa-bell"></i>
+                  FCM Notifications
+                </span>
+              </div>
+              
+              <div class="project-actions">
+                <a href="projects/seva-book.html" class="btn btn-secondary btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                  Details
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.tsm.bookseva" target="_blank" class="btn btn-primary btn-sm">
+                  <i class="fab fa-google-play"></i>
+                  Play Store
+                </a>
               </div>
             </div>
           </article>
 
           <!-- Digital Gram -->
           <article class="project-card">
-            <img src="assets/screenshots/digital-gram/01-home.png" alt="Digital Gram screenshot" class="project-thumb" />
+            <div class="project-image">
+              <img src="assets/screenshots/digital-gram/01-home.png" alt="Digital Gram" loading="lazy">
+              <div class="project-overlay">
+                <a href="projects/digital-gram.html" class="project-link">
+                  <i class="fas fa-eye"></i>
+                  View Details
+                </a>
+              </div>
+            </div>
+            
             <div class="project-content">
-              <h3>Digital Gram</h3>
-              <p class="muted">Category-based documents with in-app search & viewer</p>
-              <div class="project-links">
-                <a href="projects/digital-gram.html" class="link">Details →</a>
-                <a href="https://play.google.com/store/apps/details?id=com.tsm.digitalgram" target="_blank" class="link">Play Store</a>
+              <div class="project-badges">
+                <span class="project-badge badge-search">Search</span>
+                <span class="project-badge badge-category">Categories</span>
+              </div>
+              
+              <h3 class="project-title">Digital Gram</h3>
+              <p class="project-desc">Document management system with category-based organization, instant search, and in-app document viewer.</p>
+              
+              <div class="project-features">
+                <span class="feature">
+                  <i class="fas fa-folder"></i>
+                  Categories
+                </span>
+                <span class="feature">
+                  <i class="fas fa-search"></i>
+                  Instant Search
+                </span>
+                <span class="feature">
+                  <i class="fas fa-file-pdf"></i>
+                  PDF Viewer
+                </span>
+              </div>
+              
+              <div class="project-actions">
+                <a href="projects/digital-gram.html" class="btn btn-secondary btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                  Details
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.tsm.digitalgram" target="_blank" class="btn btn-primary btn-sm">
+                  <i class="fab fa-google-play"></i>
+                  Play Store
+                </a>
               </div>
             </div>
           </article>
 
           <!-- MIST -->
           <article class="project-card">
-            <img src="assets/screenshots/mist-migration/01-student-list.png" alt="MIST screenshot" class="project-thumb" />
+            <div class="project-image">
+              <img src="assets/screenshots/mist-migration/01-student-list.png" alt="MIST Migration" loading="lazy">
+              <div class="project-overlay">
+                <a href="projects/mist-migration.html" class="project-link">
+                  <i class="fas fa-eye"></i>
+                  View Details
+                </a>
+              </div>
+            </div>
+            
             <div class="project-content">
-              <h3>MIST — Migration Students</h3>
-              <p class="muted">Student attendance, reporting, offline capture</p>
-              <div class="project-links">
-                <a href="projects/mist-migration.html" class="link">Details →</a>
-                <a href="https://play.google.com/store/apps/details?id=com.tsm.migrationkolhapur" target="_blank" class="link">Play Store</a>
+              <div class="project-badges">
+                <span class="project-badge badge-attendance">Attendance</span>
+                <span class="project-badge badge-offline">Offline</span>
+              </div>
+              
+              <h3 class="project-title">MIST — Migration Students</h3>
+              <p class="project-desc">Student attendance tracking system with offline data capture, comprehensive reporting, and real-time sync capabilities.</p>
+              
+              <div class="project-features">
+                <span class="feature">
+                  <i class="fas fa-user-check"></i>
+                  Attendance
+                </span>
+                <span class="feature">
+                  <i class="fas fa-chart-bar"></i>
+                  Reports
+                </span>
+                <span class="feature">
+                  <i class="fas fa-wifi-slash"></i>
+                  Offline Mode
+                </span>
+              </div>
+              
+              <div class="project-actions">
+                <a href="projects/mist-migration.html" class="btn btn-secondary btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                  Details
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.tsm.migrationkolhapur" target="_blank" class="btn btn-primary btn-sm">
+                  <i class="fab fa-google-play"></i>
+                  Play Store
+                </a>
               </div>
             </div>
           </article>
         </div>
+
+        <div class="section-footer">
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-plus"></i>
+            Start Your Project
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- TECH STACK -->
-    <section class="stack reveal">
+    <!-- Skills Section -->
+    <section id="skills" class="skills reveal">
       <div class="container">
-        <h2>Tech Stack</h2>
-        <p class="muted">FlutterFlow · Dart · Firebase (Auth, Firestore, Storage) · REST APIs · Local DB · FCM · AAB/APK & Play Console</p>
+        <div class="section-header">
+          <span class="section-label">Expertise</span>
+          <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
+          <p class="section-subtitle">Comprehensive FlutterFlow development stack</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <i class="fas fa-layer-group"></i>
+              <h3>Core Platform</h3>
+            </div>
+            <div class="skill-items">
+              <span class="skill-item">FlutterFlow</span>
+              <span class="skill-item">Dart Programming</span>
+              <span class="skill-item">Custom Functions</span>
+              <span class="skill-item">Custom Widgets</span>
+              <span class="skill-item">UI/UX Design</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <i class="fas fa-database"></i>
+              <h3>Backend & APIs</h3>
+            </div>
+            <div class="skill-items">
+              <span class="skill-item">Firebase Integration</span>
+              <span class="skill-item">REST API Integration</span>
+              <span class="skill-item">Firestore Database</span>
+              <span class="skill-item">Firebase Auth</span>
+              <span class="skill-item">Cloud Storage</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <i class="fas fa-mobile-alt"></i>
+              <h3>App Features</h3>
+            </div>
+            <div class="skill-items">
+              <span class="skill-item">Local Database</span>
+              <span class="skill-item">Offline Sync</span>
+              <span class="skill-item">Push Notifications (FCM)</span>
+              <span class="skill-item">PDF Integration</span>
+              <span class="skill-item">File Management</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <i class="fas fa-rocket"></i>
+              <h3>Deployment</h3>
+            </div>
+            <div class="skill-items">
+              <span class="skill-item">Play Store Deployment</span>
+              <span class="skill-item">App Bundle (AAB)</span>
+              <span class="skill-item">APK Generation</span>
+              <span class="skill-item">Store Optimization</span>
+              <span class="skill-item">App Updates</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- Contact Section -->
     <section id="contact" class="contact reveal">
       <div class="container">
-        <h2>Contact</h2>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <div class="section-header">
+              <span class="section-label">Get in Touch</span>
+              <h2 class="section-title">Let's Build <span class="highlight">Together</span></h2>
+              <p class="section-subtitle">Ready to bring your app idea to life? Let's discuss your project.</p>
+            </div>
 
-        <!-- Replace formspree endpoint with your form endpoint -->
-        <form class="contact-form" action="https://formspree.io/f/xyzabcde" method="POST">
-          <label><input type="text" name="name" placeholder="Your name" required></label>
-          <label><input type="email" name="email" placeholder="Your email" required></label>
-          <label><textarea name="message" rows="6" placeholder="How can I help?" required></textarea></label>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
+            <div class="contact-methods">
+              <a href="mailto:hello@example.com" class="contact-method">
+                <div class="contact-method-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-method-content">
+                  <span class="contact-method-label">Email</span>
+                  <span class="contact-method-value">hello@example.com</span>
+                </div>
+              </a>
+
+              <div class="contact-method">
+                <div class="contact-method-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-method-content">
+                  <span class="contact-method-label">Response Time</span>
+                  <span class="contact-method-value">Within 24 hours</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="https://github.com/yourusername" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://twitter.com/yourusername" target="_blank" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://play.google.com/store/apps/dev?id=YOUR_ID" target="_blank" class="social-link">
+                <i class="fab fa-google-play"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <form class="contact-form" action="https://formspree.io/f/xyzabcde" method="POST">
+              <div class="form-group">
+                <label class="form-label">
+                  <span>Your Name</span>
+                  <input type="text" name="name" placeholder="John Doe" required>
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">
+                  <span>Email Address</span>
+                  <input type="email" name="email" placeholder="john@example.com" required>
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">
+                  <span>Project Type</span>
+                  <select name="project-type" required>
+                    <option value="" disabled selected>Select project type</option>
+                    <option value="new">New App Development</option>
+                    <option value="existing">Existing App Enhancement</option>
+                    <option value="integration">API/Firebase Integration</option>
+                    <option value="deployment">Play Store Deployment</option>
+                    <option value="other">Other</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">
+                  <span>Project Details</span>
+                  <textarea name="message" rows="4" placeholder="Tell me about your project, timeline, and budget..." required></textarea>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p class="muted">© Your Name • <a href="https://github.com/yourusername" target="_blank">GitHub</a> • <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="/" class="brand-link">
+              <span class="brand-icon"><i class="fas fa-code"></i></span>
+              <span class="brand-name">FlutterFlow<span class="brand-highlight">Dev</span></span>
+            </a>
+            <p class="footer-tagline">Building production-ready mobile applications with FlutterFlow</p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-link-group">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-link-group">
+              <h4>Projects</h4>
+              <ul>
+                <li><a href="projects/eschool-documents.html">E-School Documents</a></li>
+                <li><a href="projects/seva-book.html">Seva Book</a></li>
+                <li><a href="projects/digital-gram.html">Digital Gram</a></li>
+                <li><a href="projects/mist-migration.html">MIST Migration</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            © <span id="current-year">2024</span> Your Name. All rights reserved.
+          </p>
+          <p class="footer-cta">
+            Ready to start your project? <a href="#contact">Get in touch today</a>
+          </p>
+        </div>
       </div>
     </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
   </div>
 
   <script src="script.js"></script>
