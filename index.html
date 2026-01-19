@@ -8,7 +8,7 @@
   
   <!-- Favicon & Fonts -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
   
@@ -21,14 +21,21 @@
 <body>
   <!-- Loading Animation -->
   <div class="loader">
-    <div class="loader-spinner">
-      <div class="spinner"></div>
+    <div class="loader-content">
+      <div class="loader-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-dot"></div>
+      </div>
+      <div class="loader-text">
+        <span class="loader-name">Muskan K.</span>
+        <span class="loader-tag">FlutterFlow Developer</span>
+      </div>
     </div>
   </div>
 
   <!-- Cursor Effect -->
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
 
   <div class="site">
     <!-- Navigation -->
@@ -38,21 +45,21 @@
           <div class="brand">
             <a href="/" class="brand-link">
               <span class="brand-icon"><i class="fas fa-code"></i></span>
-              <span class="brand-name">FlutterFlow<span class="brand-highlight">Dev</span></span>
+              <span class="brand-name">Muskan<span class="brand-highlight">K</span></span>
             </a>
           </div>
 
           <div class="nav-menu">
             <ul class="nav-links">
-              <li><a href="#home" class="nav-link active">Home</a></li>
-              <li><a href="#about" class="nav-link">About</a></li>
-              <li><a href="#projects" class="nav-link">Projects</a></li>
-              <li><a href="#skills" class="nav-link">Skills</a></li>
-              <li><a href="#contact" class="nav-link">Contact</a></li>
+              <li><a href="#home" class="nav-link active" data-nav-link>Home</a></li>
+              <li><a href="#about" class="nav-link" data-nav-link>About</a></li>
+              <li><a href="#projects" class="nav-link" data-nav-link>Projects</a></li>
+              <li><a href="#skills" class="nav-link" data-nav-link>Skills</a></li>
+              <li><a href="#contact" class="nav-link" data-nav-link>Contact</a></li>
             </ul>
 
             <div class="nav-actions">
-              <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+              <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" data-theme-toggle>
                 <i class="fas fa-moon theme-icon"></i>
                 <span class="theme-text">Dark</span>
               </button>
@@ -60,8 +67,10 @@
                 <i class="fas fa-download"></i>
                 <span>Resume</span>
               </a>
-              <button class="menu-toggle" aria-label="Menu">
-                <i class="fas fa-bars"></i>
+              <button class="menu-toggle" aria-label="Menu" data-menu-toggle>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
               </button>
             </div>
           </div>
@@ -70,9 +79,9 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu">
+    <div class="mobile-menu" data-mobile-menu>
       <div class="mobile-menu-header">
-        <button class="menu-close"><i class="fas fa-times"></i></button>
+        <button class="menu-close" data-menu-close><i class="fas fa-times"></i></button>
       </div>
       <ul class="mobile-nav-links">
         <li><a href="#home" class="mobile-nav-link active"><i class="fas fa-home"></i> Home</a></li>
@@ -81,11 +90,28 @@
         <li><a href="#skills" class="mobile-nav-link"><i class="fas fa-cogs"></i> Skills</a></li>
         <li><a href="#contact" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
       </ul>
+      <div class="mobile-menu-footer">
+        <div class="social-links">
+          <a href="https://github.com/yourusername" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-link">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://twitter.com/yourusername" target="_blank" class="social-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://play.google.com/store/apps/dev?id=YOUR_ID" target="_blank" class="social-link">
+            <i class="fab fa-google-play"></i>
+          </a>
+        </div>
+      </div>
     </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero reveal">
       <div class="hero-background">
+        <canvas id="particles-canvas"></canvas>
         <div class="gradient-circle circle-1"></div>
         <div class="gradient-circle circle-2"></div>
         <div class="gradient-circle circle-3"></div>
@@ -93,42 +119,46 @@
       
       <div class="container">
         <div class="hero-content">
-          <div class="hero-badge">
-            <i class="fas fa-briefcase"></i>
-            <span>Currently at a fast-paced startup</span>
+          <div class="hero-badge pulse">
+            <i class="fas fa-bolt"></i>
+            <span>Building production apps at a fast-paced startup</span>
           </div>
           
           <h1 class="hero-title">
-            <span class="title-line">Crafting</span>
-            <span class="title-line highlight">Production-Ready</span>
-            <span class="title-line">FlutterFlow Apps</span>
+            <span class="title-line">FlutterFlow</span>
+            <span class="title-line highlight">Developer</span>
+            <span class="title-line">& App Specialist</span>
           </h1>
           
           <p class="hero-subtitle">
-            I'm Muskan K., a FlutterFlow Developer building and maintaining cross-platform applications (iOS, Android, Web & Desktop). I ship end-to-end features — from pixel-perfect screens and custom widgets to Firebase & REST integrations, offline caching, and Play Store releases.
+            I'm <strong>Muskan K.</strong>, a FlutterFlow Developer building and maintaining cross-platform applications (iOS, Android, Web & Desktop). I ship end-to-end features — from pixel-perfect screens and custom widgets to Firebase & REST integrations, offline caching, and Play Store releases.
           </p>
 
           <div class="hero-stats">
             <div class="stat">
-              <span class="stat-number">4</span>
+              <span class="stat-number" data-count="4">0</span>
               <span class="stat-label">Projects Deployed</span>
             </div>
             <div class="stat">
-              <span class="stat-number">4</span>
+              <span class="stat-number" data-count="4">0</span>
               <span class="stat-label">Play Store Apps</span>
             </div>
             <div class="stat">
-              <span class="stat-number">24h</span>
-              <span class="stat-label">Support Response</span>
+              <span class="stat-number" data-count="24">0</span>
+              <span class="stat-label">Hour Support</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="100">0</span>
+              <span class="stat-label">% Satisfaction</span>
             </div>
           </div>
 
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary btn-lg">
+            <a href="#projects" class="btn btn-primary btn-lg btn-icon">
               <i class="fas fa-rocket"></i>
               <span>View Projects</span>
             </a>
-            <a href="#contact" class="btn btn-outline btn-lg">
+            <a href="#contact" class="btn btn-outline btn-lg btn-icon">
               <i class="fas fa-paper-plane"></i>
               <span>Get in Touch</span>
             </a>
@@ -153,7 +183,7 @@
         <div class="about-content">
           <div class="about-text">
             <p class="about-paragraph">
-              I’m a FlutterFlow Developer with 1 year of hands-on experience at a fast-paced startup. I specialize in building production-ready cross-platform applications that are fast, reliable, and easy to use. I handle the full lifecycle — UI/UX design and implementation in FlutterFlow, custom Dart functions and widgets, backend integrations, offline caching, and Play Store deployments.
+              I'm a passionate FlutterFlow Developer with 1 year of hands-on experience at a fast-paced startup. I specialize in building production-ready cross-platform applications that are fast, reliable, and user-friendly. My expertise covers the entire development lifecycle — from UI/UX design and implementation in FlutterFlow to custom Dart functions, backend integrations, offline caching, and Play Store deployments.
             </p>
             
             <div class="services-grid">
@@ -162,7 +192,7 @@
                   <i class="fas fa-paint-brush"></i>
                 </div>
                 <h3 class="service-title">UI/UX Design</h3>
-                <p class="service-desc">Creating intuitive, beautiful, responsive interfaces that users love — optimized for performance and low-end devices.</p>
+                <p class="service-desc">Creating intuitive, beautiful, responsive interfaces optimized for performance across all devices.</p>
               </div>
               
               <div class="service-card">
@@ -170,7 +200,7 @@
                   <i class="fas fa-code"></i>
                 </div>
                 <h3 class="service-title">Custom Development</h3>
-                <p class="service-desc">Custom functions (Dart), reusable widgets, and complex workflows implemented inside FlutterFlow and Flutter.</p>
+                <p class="service-desc">Custom Dart functions, reusable widgets, and complex workflows in FlutterFlow and Flutter.</p>
               </div>
               
               <div class="service-card">
@@ -178,7 +208,7 @@
                   <i class="fas fa-cloud"></i>
                 </div>
                 <h3 class="service-title">Backend Integration</h3>
-                <p class="service-desc">Firebase services (Auth, Firestore, Storage, FCM), REST API integrations, secure JSON handling and authentication flows.</p>
+                <p class="service-desc">Firebase services (Auth, Firestore, Storage, FCM), REST APIs, secure JSON handling and authentication flows.</p>
               </div>
               
               <div class="service-card">
@@ -403,7 +433,7 @@
         </div>
 
         <div class="section-footer">
-          <a href="#contact" class="btn btn-outline">
+          <a href="#contact" class="btn btn-outline btn-icon">
             <i class="fas fa-plus"></i>
             Start Your Project
           </a>
@@ -423,7 +453,9 @@
         <div class="skills-grid">
           <div class="skill-category">
             <div class="skill-category-header">
-              <i class="fas fa-layer-group"></i>
+              <div class="skill-icon">
+                <i class="fas fa-layer-group"></i>
+              </div>
               <h3>Core Platform</h3>
             </div>
             <div class="skill-items">
@@ -438,11 +470,13 @@
 
           <div class="skill-category">
             <div class="skill-category-header">
-              <i class="fas fa-database"></i>
+              <div class="skill-icon">
+                <i class="fas fa-database"></i>
+              </div>
               <h3>Backend & APIs</h3>
             </div>
             <div class="skill-items">
-              <span class="skill-item">Firebase Integration (Auth, Firestore, Storage)</span>
+              <span class="skill-item">Firebase Integration</span>
               <span class="skill-item">REST API Integration</span>
               <span class="skill-item">Firestore Database</span>
               <span class="skill-item">Firebase Auth</span>
@@ -452,21 +486,25 @@
 
           <div class="skill-category">
             <div class="skill-category-header">
-              <i class="fas fa-mobile-alt"></i>
+              <div class="skill-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
               <h3>App Features</h3>
             </div>
             <div class="skill-items">
               <span class="skill-item">Local Database</span>
               <span class="skill-item">Offline Caching & Sync</span>
-              <span class="skill-item">Push Notifications (FCM)</span>
+              <span class="skill-item">Push Notifications</span>
               <span class="skill-item">PDF & File Viewer</span>
-              <span class="skill-item">Responsive Design (Mobile / Web / Desktop)</span>
+              <span class="skill-item">Responsive Design</span>
             </div>
           </div>
 
           <div class="skill-category">
             <div class="skill-category-header">
-              <i class="fas fa-rocket"></i>
+              <div class="skill-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
               <h3>Deployment</h3>
             </div>
             <div class="skill-items">
@@ -541,7 +579,7 @@
           </div>
 
           <div class="contact-form-wrapper">
-            <form class="contact-form" action="https://formspree.io/f/xyzabcde" method="POST">
+            <form class="contact-form" id="contact-form" action="https://formspree.io/f/xyzabcde" method="POST">
               <div class="form-group">
                 <label class="form-label">
                   <span>Your Name</span>
@@ -635,7 +673,7 @@
     </footer>
 
     <!-- Back to Top -->
-    <button class="back-to-top" aria-label="Back to top">
+    <button class="back-to-top" aria-label="Back to top" data-back-to-top>
       <i class="fas fa-chevron-up"></i>
     </button>
   </div>
